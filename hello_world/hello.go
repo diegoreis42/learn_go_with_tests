@@ -1,17 +1,15 @@
 package main
 
 func Hello(name string, language string) string {
-  switch language {
+	switch language {
 
-  case "English":
-    return "Hello, " + name
-  
-  case "Portuguese":
-    return "Olá, " + name
-  
-  default:
-    return "Hello, World" 
-  }
+	case "English":
+		return "Hello, " + name
+
+	case "Portuguese":
+		return "Olá, " + name
+
+	default:
+		return "Hello, World"
+	}
 }
-
-
