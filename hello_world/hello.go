@@ -1,16 +1,17 @@
 package main
 
-import "fmt"
+func Hello(name string, language string) string {
+  switch language {
 
-func Hello(name string) string {
-  if name == "" {
-    return "Hello, World"
+  case "English":
+    return "Hello, " + name
+  
+  case "Portuguese":
+    return "Olá, " + name
+  
+  default:
+    return "Hello, World" 
   }
-
-  return "Hello, " + name
 }
 
-func main() {
-  fmt.Println(Hello("Yawd"))
-}
 
