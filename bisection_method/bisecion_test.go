@@ -12,8 +12,8 @@ func TestBisection(t *testing.T) {
 		}
 
 		got := Bisection(function, 1.0, 3.0, 0.02)
-		givenPrecision:= got[1] - got[0]
-    want := 0.02
+		givenPrecision := got[1] - got[0]
+		want := 0.02
 
 		if givenPrecision > want {
 			t.Errorf("%v want %f, got %f", got, want, givenPrecision)

@@ -21,31 +21,31 @@ func (d Dictionary) Search(key string) (string, error) {
 }
 
 func (d Dictionary) Add(key, body string) error {
-  _, err := d.Search(key)
+	_, err := d.Search(key)
 
-  switch err {
-  case ErrNotFound:
-    d[key] = body
-  case nil:
-    return ErrWordExists
-  default:
-    return err
-  }
+	switch err {
+	case ErrNotFound:
+		d[key] = body
+	case nil:
+		return ErrWordExists
+	default:
+		return err
+	}
 
 	return nil
 }
 
 func (d Dictionary) Update(key, body string) error {
-  _, err := d.Search(key)
+	_, err := d.Search(key)
 
-  switch err {
-  case ErrNotFound:
-    return ErrWordDoesNotExist
-  case nil:
-    d[key] = body
-  default:
-    return err
-  }
-  
-  return nil
+	switch err {
+	case ErrNotFound:
+		return ErrWordDoesNotExist
+	case nil:
+		d[key] = body
+	default:
+		return err
+	}
+
+	return nil
 }
